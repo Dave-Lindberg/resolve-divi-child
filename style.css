@@ -386,7 +386,6 @@ _______________________________________________________ */
 /* Footer
 _______________________________________________________ */
 #main-footer {
-  margin-top: 4em;
   font-weight: 200;
 }
 
@@ -562,7 +561,7 @@ _______________________________________________________ */
   .text-section-number-left img,
   .text-section-icon-right img,
   .text-section-number-right img {
-    width: 300px;
+    width: 250px;
   }
 }
 
@@ -694,8 +693,9 @@ _______________________________________________________ */
 }
 
 .contact-call {
-  width: 80% !important;
   padding-bottom: 3em !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .contact-call .et_pb_column {
@@ -703,18 +703,49 @@ _______________________________________________________ */
   max-width: 80%;
   padding: 1em 3em;
   border-radius: 9px;
+  margin: 1.5em 10%;
 }
 
-.contact-form-area {
+@media (min-width: 980px) {
+  .contact-call {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+    max-width: 80% !important;
+    width: 80% !important;
+  }
+  .contact-call .et_pb_column {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+#lfc5d4da1e1d16e4 .lf-form-container {
+  width: 100% !important;
+}
+
+.contact-form-area,
+.contact-schedule-area {
   background-color: #FFFCF5;
   padding: 1em 3em;
   border-radius: 9px;
 }
 
-.contact-schedule-area {
-  background-color: #FFFCF5;
-  padding: 1em 3em 2em;
-  border-radius: 9px;
+.contact-form-area h2,
+.contact-schedule-area h2 {
+  font-weight: 21px !important;
+}
+
+@media (min-width: 980px) {
+  .contact-form-area h2,
+  .contact-schedule-area h2 {
+    font-weight: 30px !important;
+  }
 }
 
 /* What We Do Page
@@ -733,6 +764,36 @@ _______________________________________________________ */
 @media (min-width: 1100px) {
   .what-we-do-header span {
     color: #2AC971 !important;
+  }
+}
+
+#sub-header {
+  padding: 0px !important;
+  width: 80%;
+  margin: 1em 10% !important;
+}
+
+#sub-header h2 {
+  padding-left: 0px !important;
+}
+
+#sub-header P, #sub-header ul {
+  padding-left: 0px !important;
+}
+
+#sub-header ul {
+  margin-left: 0px !important;
+}
+
+@media (min-width: 980px) {
+  #sub-header {
+    margin: 3em 10% !important;
+    font-size: 120%;
+  }
+  #sub-header ul {
+    margin-left: 3em !important;
+    -webkit-column-count: 2;
+            column-count: 2;
   }
 }
 
@@ -810,6 +871,8 @@ _______________________________________________________ */
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #one-two-three .et_pb_column .text-section-number-left .et_pb_text_inner div img {
