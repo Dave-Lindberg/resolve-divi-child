@@ -5,7 +5,7 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.0.0
+ Version:        1.1.1
 */
  
  
@@ -46,6 +46,7 @@ h1 {
 h2 {
 	font-size: 2 * $base-font-size;
 	font-weight: 700;
+
 	.fas {
 		color: $blue-muted;
 	}
@@ -102,8 +103,6 @@ h1, h2, h3, h4, h5, h6, p {
 	display: grid;
 	grid-template-columns: 60px auto;
 	grid-template-rows: 1fr;
-.fa, .fas {
-	}
 }
 
 .et_pb_section {
@@ -172,14 +171,22 @@ table {
 	background-color: $off-white;
 	font-weight: 200;
 	border: none !important;
-	margin-left: 60px !important;
+	margin-left: 0px !important;
 	color: $blue-dark;
+	@media (min-width: 980px) {
+		margin-left: 60px !important;
+	}
+
 	th {
 		font-weight: 200 !important;
 	}
-	td {
+	th, td {
 		vertical-align: top;
 		line-height: 1.3em;
+		padding: 9px 3px !important;
+		@media (min-width: 980px) {
+			padding: 6px 24px !important;
+		}	
 		.fas {
 			font-size: 200%;
 			margin-bottom: .2em;
@@ -200,17 +207,20 @@ _______________________________________________________ */
 }
 #top-menu li {
 	font-weight: 200;
+	@media (max-width: 1200px) {
+		padding-right: 12px;
+	}
 	a {
 		padding-bottom: 36px !important;
+		@media (max-width: 1200px) {
+			font-size: 17px !important;
+		}	
 	}
 }
 
 
 #main-page-header {
 	height: 66vh;
-	@media (min-width: 1100px) {
-		height: 36vw !important;
-	}
 	.et_pb_fullwidth_header_container {
 		display: grid;
     grid-template-columns: 1fr;
@@ -314,25 +324,33 @@ _______________________________________________________ */
 _______________________________________________________ */
 #main-footer {
 	font-weight: 200;
+	background-color: $background-light !important;
+	margin-top: 0px !important;
 	h4, p {
 		padding-left: 0px !important;
 	}
 	.footer-widget {
 		margin-bottom: 0;
+		h3 {
+			font-size: 24px;
+			font-weight: 700;
+		}
 	}
 }
-
+#footer-bottom {
+	background-color: $background-light !important;
+}
 #footer-info {
 	color: $grey-dark !important;
 	.credits {
 		font-size: 14px;
-		color: #ffffff !important;
+		color: $background-light !important;
 		a {
 			font-weight: 400;
-			color: #ffffff;
+			color: $background-light !important;
 		}
 		span a:hover {
-			color: #ffffff;
+			color: $background-light !important;
 			cursor: default;
 		}
 	}
@@ -360,18 +378,18 @@ _______________________________________________________ */
 /* Home Page
 _______________________________________________________ */
 .home-page-header {
-	background-image: url(https://media.gettyimages.com/photos/woman-on-a-beach-in-kobe-picture-id543226407?s=2048x2048);
+	background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/GettyImages-543226407-400x284.jpg);
 	background-position: top;
 	background-size: contain;
 	.header-content {
 		margin: 54vw auto 20px auto !important;
 		.et_pb_fullwidth_header_subhead {
-			font-size: 21px !important;
+			font-size: 20px !important;
 			color: $brick-dark !important;
 		}
 	}
 	@media (min-width: 1100px) {
-		background-image: url(https://media.gettyimages.com/photos/woman-on-a-beach-in-kobe-picture-id543226407?s=2048x2048);
+		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/GettyImages-543226407.jpg);
 		background-position: center;
 		background-size: cover;
 	.header-content {
@@ -401,14 +419,15 @@ _______________________________________________________ */
 		display: grid;
 		grid-template-columns: minmax(0, 20px) auto minmax(0, 20px);
 		grid-template-rows: auto auto auto;
-		grid-gap: 1em;
-		padding: 3.5em 0;
+		grid-gap: .125em !important;
+		padding: 3.5em 0 !important;
 		@media (min-width: 980px) {
+			grid-gap: 1em !important;
 			grid-template-columns: minmax(0, 180px) auto auto minmax(0, 180px);
 			grid-template-rows: auto auto;
 			}
 		@media (min-width: 1100px) {
-			grid-gap: 2em;
+			grid-gap: 2em !important;
 		}
 		h2, p {
 			padding-left: 0px !important;
@@ -420,6 +439,7 @@ _______________________________________________________ */
 		font-weight: 200;
 		letter-spacing: -5px;
 		white-space: nowrap;
+		margin-bottom: .3em !important;
 		@media (min-width: 1100px) {
 			font-size: 160px;
 		}
@@ -534,15 +554,26 @@ _______________________________________________________ */
 			font-weight: 30px !important;
 		}
 	}
+	@media (max-width: 979px) {
+		padding: 1em 0em !important;;
+	}
+
 }
 
+// leadformly
+
+.leadformly-header {
+	@media (max-width: 979px) {
+		h3 {
+			font-size: 27px !important;
+		}
+	}
+}
 
 /* What We Do Page
 _______________________________________________________ */
 .what-we-do-header {
-	@media (min-width: 1100px) {
-		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/07/stock-photo-beautiful-mixed-race-woman-expressing-freedom-outdoors-with-her-arms-outstretched-272544824.jpg)
-	}
+		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/adults-blur-couple-1516036-400x284.jpg);
 	span {
 		font-weight: 500;
 		color: $green-bright !important;
@@ -550,7 +581,31 @@ _______________________________________________________ */
 			color: $green-bright !important;
 		}		
 	}
+	background-position: top;
+	background-size: contain;
+	height: 36vh !important;
+	.header-content {
+		margin: 54vw auto 20px auto !important;
+		.et_pb_fullwidth_header_subhead {
+			font-size: 20px !important;
+			color: $brick-dark !important;
+		}
+	}
+	@media (min-width: 1100px) {
+		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/adults-blur-couple-1516036.jpg);
+		background-position: center;
+		background-size: cover;
+		.header-content {
+			margin: 20px auto !important;
+			text-shadow: 0em 0em 1em rgba(10,10,10,0.9);
+			.et_pb_fullwidth_header_subhead {
+				font-size: 27px !important;
+				color: $background !important;
+			}
+		}
+	}
 }
+
 #sub-header {
 	padding: 0px !important;
 	width: 80%;
@@ -567,11 +622,12 @@ _______________________________________________________ */
 		margin-left: 0px !important;
 	}
 	@media (min-width: 980px) {
-	margin: 3em 10% !important;
+	margin: 3em auto !important;
 	font-size: 120%;
 		ul{
 			margin-left: 3em !important;
-			column-count: 2;
+			-webkit-column-count: 2;
+			        column-count: 2;
 		}
 	}
 }
@@ -601,6 +657,7 @@ padding: 3em 10% !important;
 		grid-row: 1/2;
 		h2 {
 			padding-left: 0px;
+			text-align: center !important;
 		}
 	}
 	@media (min-width: 980px) {
@@ -630,6 +687,7 @@ padding: 3em 10% !important;
 			h2 {
 				grid-column: 2/3;
 				grid-row: 2/3;
+				text-align: center !important;
 				.number {
 					display: inline !important;
 					font-size: inherit;
@@ -667,8 +725,28 @@ padding: 3em 10% !important;
 _______________________________________________________ */
 
 .about-page-header {
+	background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/challenge-connected-connecting-1268480-400x284.jpg);
+	background-position: top;
+	background-size: contain;
+	height: 46vh !important;
+	.header-content {
+		margin: 54vw auto 20px auto !important;
+		.et_pb_fullwidth_header_subhead {
+			font-size: 20px !important;
+			color: $brick-dark !important;
+		}
+	}
 	@media (min-width: 1100px) {
-		background-image: url(https://image.shutterstock.com/z/stock-photo-portrait-of-smiling-young-businessman-in-office-144537455.jpg)
+		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/challenge-connected-connecting-1268480.jpg);
+		background-position: center;
+		background-size: cover;
+		.header-content {
+			margin: 20px auto !important;
+			.et_pb_fullwidth_header_subhead {
+				font-size: 27px !important;
+				color: $background !important;
+			}
+		}
 	}
 }
 
@@ -708,6 +786,17 @@ _______________________________________________________ */
 		}
 	}
 }
+/* Guide Part 1 Page
+_______________________________________________________ */
+
+.graphic-row {
+	@media (max-width: 979px) {
+		h3 {
+			font-size: 60px !important;
+		}
+	}
+}
+
 /* Join Our Team Page
 _______________________________________________________ */
 
@@ -750,10 +839,32 @@ _______________________________________________________ */
 /* Blog
 _______________________________________________________ */
 .blog-header {
+	background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/shutterstock_734672728-400x284.jpg);
+	background-position: top;
+	background-size: contain;
+	height: 46vh !important;
+	.header-content {
+		margin: 54vw auto 20px auto !important;
+		.et_pb_fullwidth_header_subhead {
+			font-size: 20px !important;
+			color: $brick-dark !important;
+		}
+	}
 	@media (min-width: 1100px) {
-		background-image: url(https://image.shutterstock.com/z/stock-photo-smiling-african-couple-doing-their-online-banking-and-paying-bills-with-a-laptop-at-their-kitchen-734672728.jpg)
+		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/shutterstock_734672728.jpg);
+		background-position: center;
+		background-size: cover;
+		.header-content {
+			margin: 20px auto !important;
+			.et_pb_fullwidth_header_subhead {
+				font-size: 27px !important;
+				color: $background !important;
+			}
+		}
 	}
 }
+
+
 
 .post-meta {
 	.author {
@@ -782,6 +893,9 @@ li.categories {
 	list-style: none !important;
 	padding-left: 60px !important;
 	color: $brick-dark !important;
+	@media (max-width: 979px){
+		padding-left: 0px !important;
+	}
 	ul {
 		padding-left: 0px !important;
 	}
@@ -801,21 +915,25 @@ li.cat-item {
 	.entry-featured-image-url {
 		grid-column: 1/2;
 		grid-row: 1/1;
-		padding-left: 60px;
+		padding-left: 0px;
 	}
 	h2 {
 		grid-column: 1/2;
 		grid-row: 2/3;
+		padding-left: 0px;
 	}
 	.post-meta {
 		grid-column: 1/2;
 		grid-row: 3/4;
+		padding-left: 0px;
 	}
 	.post-content {
 		grid-column: 1/2;
 		grid-row: 4/5;
-	}
-
+		p {
+			padding-left: 0px !important;
+		}
+}
 	@media (min-width: 980px) {
 		grid-template-columns: 1fr 1.5fr;
 		grid-template-rows: auto auto auto;
@@ -827,15 +945,20 @@ li.cat-item {
 		h2 {
 			grid-column: 2/3;
 			grid-row: 1/2;
+			padding-left: 60px;
 		}
 		.post-meta {
 			grid-column: 2/3;
 			grid-row: 2/3;
+			padding-left: 60px;
 		}
 		.post-content {
 			grid-column: 2/3;
 			grid-row: 3/4;
-		}
+			p{
+				padding-left: 60px !important;
+			}
+			}
 	}
 }
 .about-the-author {
@@ -873,6 +996,12 @@ li.cat-item {
 	p {
 		font-weight: 400;
 	}
+	h4 {
+		@media (max-width: 979px){
+			padding-left: 0px !important;
+		}
+	}
+
 }
 
 .blog-sidebar {
@@ -884,6 +1013,11 @@ li.cat-item {
 	}
   .et_pb_post {
 		margin-bottom: 1em;
+		h2, .post-meta {
+			@media (max-width: 979px){
+				padding-left: 0px !important;
+			}
+			}
 	}
 }
 
@@ -897,6 +1031,11 @@ li.cat-item {
 		padding-left: 0px;
 	}
 }
+
+/* Under Construction
+_______________________________________________________ */
+
+
 
 /* Style Guide
 _______________________________________________________ */

@@ -5,7 +5,7 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.0.0
+ Version:        1.1.1
 */
 /* =Theme customization starts here
 ------------------------------------------------------- */
@@ -203,20 +203,33 @@ table {
   background-color: #FFFCF5;
   font-weight: 200;
   border: none !important;
-  margin-left: 60px !important;
+  margin-left: 0px !important;
   color: #3A60A6;
+}
+
+@media (min-width: 980px) {
+  table {
+    margin-left: 60px !important;
+  }
 }
 
 table th {
   font-weight: 200 !important;
 }
 
-table td {
+table th, table td {
   vertical-align: top;
   line-height: 1.3em;
+  padding: 9px 3px !important;
 }
 
-table td .fas {
+@media (min-width: 980px) {
+  table th, table td {
+    padding: 6px 24px !important;
+  }
+}
+
+table th .fas, table td .fas {
   font-size: 200%;
   margin-bottom: .2em;
   color: #4C7CD9;
@@ -237,18 +250,24 @@ _______________________________________________________ */
   font-weight: 200;
 }
 
+@media (max-width: 1200px) {
+  #top-menu li {
+    padding-right: 12px;
+  }
+}
+
 #top-menu li a {
   padding-bottom: 36px !important;
 }
 
-#main-page-header {
-  height: 66vh;
+@media (max-width: 1200px) {
+  #top-menu li a {
+    font-size: 17px !important;
+  }
 }
 
-@media (min-width: 1100px) {
-  #main-page-header {
-    height: 36vw !important;
-  }
+#main-page-header {
+  height: 66vh;
 }
 
 #main-page-header .et_pb_fullwidth_header_container {
@@ -387,6 +406,8 @@ _______________________________________________________ */
 _______________________________________________________ */
 #main-footer {
   font-weight: 200;
+  background-color: #FFF3DB !important;
+  margin-top: 0px !important;
 }
 
 #main-footer h4, #main-footer p {
@@ -397,22 +418,31 @@ _______________________________________________________ */
   margin-bottom: 0;
 }
 
+#main-footer .footer-widget h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#footer-bottom {
+  background-color: #FFF3DB !important;
+}
+
 #footer-info {
   color: #4A4A4A !important;
 }
 
 #footer-info .credits {
   font-size: 14px;
-  color: #ffffff !important;
+  color: #FFF3DB !important;
 }
 
 #footer-info .credits a {
   font-weight: 400;
-  color: #ffffff;
+  color: #FFF3DB !important;
 }
 
 #footer-info .credits span a:hover {
-  color: #ffffff;
+  color: #FFF3DB !important;
   cursor: default;
 }
 
@@ -435,7 +465,7 @@ _______________________________________________________ */
 /* Home Page
 _______________________________________________________ */
 .home-page-header {
-  background-image: url(https://media.gettyimages.com/photos/woman-on-a-beach-in-kobe-picture-id543226407?s=2048x2048);
+  background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/GettyImages-543226407-400x284.jpg);
   background-position: top;
   background-size: contain;
 }
@@ -445,13 +475,13 @@ _______________________________________________________ */
 }
 
 .home-page-header .header-content .et_pb_fullwidth_header_subhead {
-  font-size: 21px !important;
+  font-size: 20px !important;
   color: #B35236 !important;
 }
 
 @media (min-width: 1100px) {
   .home-page-header {
-    background-image: url(https://media.gettyimages.com/photos/woman-on-a-beach-in-kobe-picture-id543226407?s=2048x2048);
+    background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/GettyImages-543226407.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -484,8 +514,8 @@ _______________________________________________________ */
       grid-template-columns: minmax(0, 20px) auto minmax(0, 20px);
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
-  grid-gap: 1em;
-  padding: 3.5em 0;
+  grid-gap: .125em !important;
+  padding: 3.5em 0 !important;
 }
 
 @media (min-width: 980px) {
@@ -493,6 +523,7 @@ _______________________________________________________ */
   .text-section-number-left .et_pb_text_inner,
   .text-section-icon-right .et_pb_text_inner,
   .text-section-number-right .et_pb_text_inner {
+    grid-gap: 1em !important;
     -ms-grid-columns: minmax(0, 180px) auto auto minmax(0, 180px);
         grid-template-columns: minmax(0, 180px) auto auto minmax(0, 180px);
     -ms-grid-rows: auto auto;
@@ -505,7 +536,7 @@ _______________________________________________________ */
   .text-section-number-left .et_pb_text_inner,
   .text-section-icon-right .et_pb_text_inner,
   .text-section-number-right .et_pb_text_inner {
-    grid-gap: 2em;
+    grid-gap: 2em !important;
   }
 }
 
@@ -528,6 +559,7 @@ _______________________________________________________ */
   font-weight: 200;
   letter-spacing: -5px;
   white-space: nowrap;
+  margin-bottom: .3em !important;
 }
 
 @media (min-width: 1100px) {
@@ -748,12 +780,26 @@ _______________________________________________________ */
   }
 }
 
+@media (max-width: 979px) {
+  .contact-form-area,
+  .contact-schedule-area {
+    padding: 1em 0em !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .leadformly-header h3 {
+    font-size: 27px !important;
+  }
+}
+
 /* What We Do Page
 _______________________________________________________ */
-@media (min-width: 1100px) {
-  .what-we-do-header {
-    background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/07/stock-photo-beautiful-mixed-race-woman-expressing-freedom-outdoors-with-her-arms-outstretched-272544824.jpg);
-  }
+.what-we-do-header {
+  background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/adults-blur-couple-1516036-400x284.jpg);
+  background-position: top;
+  background-size: contain;
+  height: 36vh !important;
 }
 
 .what-we-do-header span {
@@ -764,6 +810,31 @@ _______________________________________________________ */
 @media (min-width: 1100px) {
   .what-we-do-header span {
     color: #2AC971 !important;
+  }
+}
+
+.what-we-do-header .header-content {
+  margin: 54vw auto 20px auto !important;
+}
+
+.what-we-do-header .header-content .et_pb_fullwidth_header_subhead {
+  font-size: 20px !important;
+  color: #B35236 !important;
+}
+
+@media (min-width: 1100px) {
+  .what-we-do-header {
+    background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/adults-blur-couple-1516036.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .what-we-do-header .header-content {
+    margin: 20px auto !important;
+    text-shadow: 0em 0em 1em rgba(10, 10, 10, 0.9);
+  }
+  .what-we-do-header .header-content .et_pb_fullwidth_header_subhead {
+    font-size: 27px !important;
+    color: #FFEDC7 !important;
   }
 }
 
@@ -787,13 +858,13 @@ _______________________________________________________ */
 
 @media (min-width: 980px) {
   #sub-header {
-    margin: 3em 10% !important;
+    margin: 3em auto !important;
     font-size: 120%;
   }
   #sub-header ul {
     margin-left: 3em !important;
     -webkit-column-count: 2;
-            column-count: 2;
+    column-count: 2;
   }
 }
 
@@ -832,6 +903,7 @@ _______________________________________________________ */
 
 #one-two-three .et_pb_column .headline h2 {
   padding-left: 0px;
+  text-align: center !important;
 }
 
 @media (min-width: 980px) {
@@ -886,6 +958,7 @@ _______________________________________________________ */
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  text-align: center !important;
 }
 
 #one-two-three .et_pb_column .text-section-number-left .et_pb_text_inner h2 .number {
@@ -922,9 +995,34 @@ _______________________________________________________ */
 
 /* About Page
 _______________________________________________________ */
+.about-page-header {
+  background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/challenge-connected-connecting-1268480-400x284.jpg);
+  background-position: top;
+  background-size: contain;
+  height: 46vh !important;
+}
+
+.about-page-header .header-content {
+  margin: 54vw auto 20px auto !important;
+}
+
+.about-page-header .header-content .et_pb_fullwidth_header_subhead {
+  font-size: 20px !important;
+  color: #B35236 !important;
+}
+
 @media (min-width: 1100px) {
   .about-page-header {
-    background-image: url(https://image.shutterstock.com/z/stock-photo-portrait-of-smiling-young-businessman-in-office-144537455.jpg);
+    background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/challenge-connected-connecting-1268480.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .about-page-header .header-content {
+    margin: 20px auto !important;
+  }
+  .about-page-header .header-content .et_pb_fullwidth_header_subhead {
+    font-size: 27px !important;
+    color: #FFEDC7 !important;
   }
 }
 
@@ -968,6 +1066,14 @@ _______________________________________________________ */
   vertical-align: super;
 }
 
+/* Guide Part 1 Page
+_______________________________________________________ */
+@media (max-width: 979px) {
+  .graphic-row h3 {
+    font-size: 60px !important;
+  }
+}
+
 /* Join Our Team Page
 _______________________________________________________ */
 .job-listing .job-preview {
@@ -1009,9 +1115,34 @@ _______________________________________________________ */
 
 /* Blog
 _______________________________________________________ */
+.blog-header {
+  background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/shutterstock_734672728-400x284.jpg);
+  background-position: top;
+  background-size: contain;
+  height: 46vh !important;
+}
+
+.blog-header .header-content {
+  margin: 54vw auto 20px auto !important;
+}
+
+.blog-header .header-content .et_pb_fullwidth_header_subhead {
+  font-size: 20px !important;
+  color: #B35236 !important;
+}
+
 @media (min-width: 1100px) {
   .blog-header {
-    background-image: url(https://image.shutterstock.com/z/stock-photo-smiling-african-couple-doing-their-online-banking-and-paying-bills-with-a-laptop-at-their-kitchen-734672728.jpg);
+    background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/shutterstock_734672728.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .blog-header .header-content {
+    margin: 20px auto !important;
+  }
+  .blog-header .header-content .et_pb_fullwidth_header_subhead {
+    font-size: 27px !important;
+    color: #FFEDC7 !important;
   }
 }
 
@@ -1042,6 +1173,12 @@ li.categories {
   color: #B35236 !important;
 }
 
+@media (max-width: 979px) {
+  li.categories {
+    padding-left: 0px !important;
+  }
+}
+
 li.categories ul {
   padding-left: 0px !important;
 }
@@ -1069,7 +1206,7 @@ li.cat-item {
   grid-column: 1/2;
   -ms-grid-row: 1;
   grid-row: 1/1;
-  padding-left: 60px;
+  padding-left: 0px;
 }
 
 #main-blog-page article h2 {
@@ -1079,6 +1216,7 @@ li.cat-item {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  padding-left: 0px;
 }
 
 #main-blog-page article .post-meta {
@@ -1088,6 +1226,7 @@ li.cat-item {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
+  padding-left: 0px;
 }
 
 #main-blog-page article .post-content {
@@ -1097,6 +1236,10 @@ li.cat-item {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
+}
+
+#main-blog-page article .post-content p {
+  padding-left: 0px !important;
 }
 
 @media (min-width: 980px) {
@@ -1122,6 +1265,7 @@ li.cat-item {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
+    padding-left: 60px;
   }
   #main-blog-page article .post-meta {
     -ms-grid-column: 2;
@@ -1130,6 +1274,7 @@ li.cat-item {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+    padding-left: 60px;
   }
   #main-blog-page article .post-content {
     -ms-grid-column: 2;
@@ -1138,6 +1283,9 @@ li.cat-item {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
+  }
+  #main-blog-page article .post-content p {
+    padding-left: 60px !important;
   }
 }
 
@@ -1173,6 +1321,12 @@ li.cat-item {
   font-weight: 400;
 }
 
+@media (max-width: 979px) {
+  .blog-sidebar-categories h4 {
+    padding-left: 0px !important;
+  }
+}
+
 .blog-sidebar h2 {
   font-size: 18px;
   font-weight: 400;
@@ -1184,6 +1338,12 @@ li.cat-item {
   margin-bottom: 1em;
 }
 
+@media (max-width: 979px) {
+  .blog-sidebar .et_pb_post h2, .blog-sidebar .et_pb_post .post-meta {
+    padding-left: 0px !important;
+  }
+}
+
 .category #page-container article {
   font-weight: 200;
 }
@@ -1192,6 +1352,8 @@ li.cat-item {
   padding-left: 0px;
 }
 
+/* Under Construction
+_______________________________________________________ */
 /* Style Guide
 _______________________________________________________ */
 .entity {
