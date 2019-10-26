@@ -5,7 +5,7 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.1.1
+ Version:        1.1.3
 */
  
  
@@ -378,20 +378,31 @@ _______________________________________________________ */
 /* Home Page
 _______________________________________________________ */
 .home-page-header {
-	background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/GettyImages-543226407-400x284.jpg);
+	background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/GettyImages-543226407-400x284.jpg);
 	background-position: top;
 	background-size: contain;
+	height: 69vh !important;
 	.header-content {
-		margin: 54vw auto 20px auto !important;
+		margin: 60vw auto 20px auto !important;
 		.et_pb_fullwidth_header_subhead {
 			font-size: 20px !important;
 			color: $brick-dark !important;
 		}
+		.et_pb_button {
+			margin-bottom: 1em;
+		}
+	}
+	// tablet
+	.header-content {
+		@media (min-width: 760px) {  
+			margin: 66vw auto 20px auto !important;
+		}	
 	}
 	@media (min-width: 1100px) {
-		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/GettyImages-543226407.jpg);
+		background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/GettyImages-543226407.jpg);
 		background-position: center;
 		background-size: cover;
+		height: 66vh !important;
 	.header-content {
 		margin: 20px auto !important;
 		.et_pb_fullwidth_header_subhead {
@@ -573,16 +584,13 @@ _______________________________________________________ */
 /* What We Do Page
 _______________________________________________________ */
 .what-we-do-header {
-		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/adults-blur-couple-1516036-400x284.jpg);
+		background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/adults-blur-couple-1516036-400x284.jpg);
 	span {
 		font-weight: 500;
 		color: $green-bright !important;
-		@media (min-width: 1100px) {
-			color: $green-bright !important;
-		}		
 	}
 	background-position: top;
-	background-size: contain;
+	background-size: cover;
 	height: 36vh !important;
 	.header-content {
 		margin: 54vw auto 20px auto !important;
@@ -591,10 +599,20 @@ _______________________________________________________ */
 			color: $brick-dark !important;
 		}
 	}
+	// tablet
+	@media (min-width: 760px) {  
+		margin-bottom: 6em !important;
+		.header-content {
+			margin: 44vw auto 20px auto !important;
+		}	
+	}
+	
 	@media (min-width: 1100px) {
-		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/adults-blur-couple-1516036.jpg);
+		background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/adults-blur-couple-1516036.jpg);
 		background-position: center;
 		background-size: cover;
+		height: 66vh !important;
+		margin-bottom: 0em !important;
 		.header-content {
 			margin: 20px auto !important;
 			text-shadow: 0em 0em 1em rgba(10,10,10,0.9);
@@ -603,13 +621,17 @@ _______________________________________________________ */
 				color: $background !important;
 			}
 		}
+		span {
+			@media (min-width: 1100px) {
+				color: $green-bright !important;
+			}
+		}
 	}
 }
 
 #sub-header {
 	padding: 0px !important;
-	width: 80%;
-	margin: 1em 10% !important;
+	margin: 1em auto !important;
 
 	h2 {
 		padding-left: 0px !important;
@@ -624,6 +646,7 @@ _______________________________________________________ */
 	@media (min-width: 980px) {
 	margin: 3em auto !important;
 	font-size: 120%;
+	width: 80%;
 		ul{
 			margin-left: 3em !important;
 			-webkit-column-count: 2;
@@ -631,6 +654,25 @@ _______________________________________________________ */
 		}
 	}
 }
+.ultimate {
+	font-size: 100% !important;
+}
+#sub-header.audit {
+	@media (max-width: 979px) {
+		margin: 3em 10% 1em !important;
+	}
+}
+#sub-header.our-mission {
+	@media (max-width: 979px) {
+		margin: 3em auto 1em !important;
+		font-size: 100% !important;
+	}
+	@media (min-width: 980px) {
+		margin: 3em auto 1em !important;
+		font-size: 100% !important;
+	}
+}
+
 .how-we-do-it {
 	span {
 		font-weight: 700;
@@ -725,7 +767,7 @@ padding: 3em 10% !important;
 _______________________________________________________ */
 
 .about-page-header {
-	background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/challenge-connected-connecting-1268480-400x284.jpg);
+	background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/challenge-connected-connecting-1268480-400x284.jpg);
 	background-position: top;
 	background-size: contain;
 	height: 46vh !important;
@@ -736,10 +778,19 @@ _______________________________________________________ */
 			color: $brick-dark !important;
 		}
 	}
+		// tablet
+		@media (min-width: 760px) {  
+			margin-bottom: 6em !important;
+			.header-content {
+				margin: 57vw auto 20px auto !important;
+			}	
+		}	
 	@media (min-width: 1100px) {
-		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/challenge-connected-connecting-1268480.jpg);
+		background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/challenge-connected-connecting-1268480.jpg);
 		background-position: center;
 		background-size: cover;
+		height: 66vh !important;
+		margin-bottom: 0em !important;
 		.header-content {
 			margin: 20px auto !important;
 			.et_pb_fullwidth_header_subhead {
@@ -750,27 +801,6 @@ _______________________________________________________ */
 	}
 }
 
-.staff-bios {
-	margin: 2em 0;
-	h5 {
-		font-style: normal !important;
-		font-size: 24px !important;
-	}
-	.et_pb_accordion_item {
-		margin-bottom: 0em !important;
-		border: none;
-		.et_pb_toggle_content {
-			font-weight: 200 !important;
-			@media (min-width: 980px) {
-				img {
-					float: right;
-					margin-left: 1em;
-					max-width: 25%;
-				}
-				}
-		}
-	}
-}
 /* 
 _______________________________________________________ */
 
@@ -786,8 +816,30 @@ _______________________________________________________ */
 		}
 	}
 }
-/* Guide Part 1 Page
+
+
+/* Guide Pages
 _______________________________________________________ */
+
+.guide {
+	@media (max-width: 979px) {
+		h1, h2, h3,	h4, h5, h6, p, ul, ol {
+				padding-left: 0px !important;
+			}
+			h2 {
+				font-size: 24px !important;
+			}
+		.fas {
+			font-size: 0px;
+		}
+		.emphatic-note {
+			margin-left: 0px !important;;
+			P {
+				grid-column: 1/3 !important;
+			}
+		}
+	}
+}
 
 .graphic-row {
 	@media (max-width: 979px) {
@@ -796,6 +848,29 @@ _______________________________________________________ */
 		}
 	}
 }
+
+// Bloom
+
+.et_bloom .et_bloom_form_header.split img {
+	max-width: 10% !important;
+}
+.et_bloom_form_content {
+	padding: 0px 30px 30px 30px !important;
+}
+.et_bloom_locked_content {
+	background-color: $green-bright;
+	width: 100%;
+	max-width: 100%;
+	padding: 10px;
+	text-align: center;
+
+	a {
+		color: white;
+	}
+
+}
+
+
 
 /* Join Our Team Page
 _______________________________________________________ */
@@ -835,13 +910,22 @@ _______________________________________________________ */
 	}
 }
 
+/* Position
+_______________________________________________________ */
+
+.jobs-template-default {
+	.saboxplugin-wrap {
+		display: none;
+	}
+}
+
 
 /* Blog
 _______________________________________________________ */
 .blog-header {
-	background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/shutterstock_734672728-400x284.jpg);
+	background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/shutterstock_734672728-400x284.jpg);
 	background-position: top;
-	background-size: contain;
+	background-size: cover;
 	height: 46vh !important;
 	.header-content {
 		margin: 54vw auto 20px auto !important;
@@ -850,10 +934,19 @@ _______________________________________________________ */
 			color: $brick-dark !important;
 		}
 	}
+	// tablet
+	@media (min-width: 760px) {  
+		margin-bottom: 6em !important;
+		.header-content {
+			margin: 57vw auto 20px auto !important;
+		}	
+	}	
 	@media (min-width: 1100px) {
-		background-image: url(http://146.148.73.246/~resolvem/wp-content/uploads/2019/08/shutterstock_734672728.jpg);
+		background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/shutterstock_734672728.jpg);
 		background-position: center;
 		background-size: cover;
+		height: 66vh !important;
+		margin-bottom: 0em !important;
 		.header-content {
 			margin: 20px auto !important;
 			.et_pb_fullwidth_header_subhead {
