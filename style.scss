@@ -10,7 +10,7 @@
 
 /* =Theme customization starts here
 ------------------------------------------------------- */
-@import "color-variables";
+@import 'color-variables';
 
 $base-font-size: 18px;
 
@@ -178,7 +178,7 @@ p {
   color: $grey-dark !important;
 }
 table {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   background-color: $off-white;
   font-weight: 200;
   border: none !important;
@@ -1001,10 +1001,12 @@ _______________________________________________________ */
   margin-bottom: 1.5em;
 }
 
+//Recent Posts, 4 columns
+
 .recent-posts-section .et_pb_column {
   @media (min-width: 760px) {
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    #main-blog-page {
+    .main-blog-area {
       grid-column: 1/2;
       @media (min-width: 760px) {
         grid-column: 1/5 !important;
@@ -1013,13 +1015,36 @@ _______________________________________________________ */
         @media (min-width: 760px) {
           grid-template-columns: 1fr 1fr 1fr 1fr !important;
         }
-      }
-      .pagination {
-        grid-column: 1/5 !important;
+        //pagination:
+        div {
+          grid-column: 1/2 !important;
+          @media (min-width: 760px) {
+            grid-column: 1/5 !important;
+          }
+
+          .pagination {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .alignleft {
+              float: none !important;
+              grid-column: 2/3 !important;
+              grid-row: 1/2;
+              justify-self: right;
+            }
+            .alignright {
+              float: none !important;
+              grid-column: 1/2 !important;
+              grid-row: 1/2;
+              justify-self: left;
+            }
+          }
+        }
       }
     }
   }
 }
+
+// blog posts, 3 columns
 .blog-post-section .et_pb_column {
   display: grid;
   grid-template-columns: 1fr;
@@ -1036,7 +1061,7 @@ _______________________________________________________ */
       grid-column: 1/3;
     }
   }
-  #main-blog-page {
+  .main-blog-area {
     grid-column: 1/2;
     @media (min-width: 760px) {
       grid-column: 1/4;
@@ -1047,7 +1072,6 @@ _______________________________________________________ */
       @media (min-width: 760px) {
         grid-template-columns: 1fr 1fr 1fr;
       }
-
       grid-gap: 1.5em;
     }
     article {
@@ -1056,17 +1080,68 @@ _______________________________________________________ */
       grid-template-rows: auto auto auto auto;
       margin-bottom: 0px !important;
     }
-    .pagination {
-      grid-column: 1/3;
-      a {
-        font-size: 15.3px;
-        font-weight: 200;
+
+    //pagination:
+    div {
+      grid-column: 1/2 !important;
+      @media (min-width: 760px) {
+        grid-column: 1/4 !important;
+      }
+
+      .pagination {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .alignleft {
+          float: none !important;
+          grid-column: 2/3 !important;
+          grid-row: 1/2;
+          justify-self: right;
+          text-align: right;
+        }
+        .alignright {
+          float: none !important;
+          grid-column: 1/2 !important;
+          grid-row: 1/2;
+          justify-self: left;
+          text-align: left;
+        }
       }
     }
   }
 }
+// revise blog pagination from https://almostinevitable.com/divi-changing-pagination-text/
+
+.pagination .alignleft a,
+.pagination .alignright a {
+  color: rgba(255, 255, 255, 0); //invisible
+  position: relative;
+}
+.pagination .alignleft a:after,
+.pagination .alignright a:after {
+  position: absolute;
+  font-size: 15.3px;
+  font-weight: 200;
+  line-height: 100%;
+  color: $green-dark;
+  width: 100%;
+  @media (min-width: 760px) {
+    width: 200px;
+  }
+}
+.pagination .alignleft a:after {
+  content: 'More Posts »';
+  text-align: left;
+  left: 0;
+}
+.pagination .alignright a:after {
+  content: '« Previous Results';
+  text-align: right;
+  right: 0;
+}
+// end blog post pagination
+
 // ...a bit janky and repetitive, but...
-#main-blog-page article {
+.main-blog-area article {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
@@ -1244,21 +1319,22 @@ _______________________________________________________ */
   }
 }
 
+.et_pb_post {
+  margin-bottom: 1em;
+  h2,
+  .post-meta {
+    @media (max-width: 979px) {
+      padding-left: 0px !important;
+    }
+  }
+}
+
 .blog-sidebar {
   h2 {
     font-size: 18px;
     font-weight: 400;
     color: $green-dark;
     padding-bottom: 0px;
-  }
-  .et_pb_post {
-    margin-bottom: 1em;
-    h2,
-    .post-meta {
-      @media (max-width: 979px) {
-        padding-left: 0px !important;
-      }
-    }
   }
 }
 
