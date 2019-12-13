@@ -380,7 +380,19 @@ _______________________________________________________ */
   li {
     list-style: none;
     a {
-      color: $sand-dark !important;
+      color: $grey-dark !important;
+    }
+  }
+}
+.et-social-icons {
+  min-width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  .et-social-icon a {
+    color: $grey-dark !important;
+    span {
+      display: inline !important;
     }
   }
 }
@@ -589,6 +601,12 @@ _______________________________________________________ */
       font-size: 27px !important;
     }
   }
+}
+
+button#lf_73930_form-form1-next-0 {
+  background-color: #356ad4 !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
 }
 
 /* What We Do Page
