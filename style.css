@@ -6,7 +6,7 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.1.3
+ Version:        1.1.5
 */
 /* =Theme customization starts here
 ------------------------------------------------------- */
@@ -665,7 +665,7 @@ _______________________________________________________ */
 .text-section-number-right h2 {
   font-weight: 700;
   -ms-flex-item-align: end;
-  -ms-grid-row-align: end;
+      -ms-grid-row-align: end;
       align-self: end;
 }
 
@@ -1152,6 +1152,111 @@ _______________________________________________________ */
     font-size: 27px !important;
     color: #ffedc7 !important;
   }
+}
+
+.staff-members img,
+.staff-member-detail img {
+  border: none !important;
+  -webkit-filter: grayscale(100);
+  filter: grayscale(100%) !important;
+}
+
+.staff-members img:hover,
+.staff-member-detail img:hover {
+  -webkit-filter: grayscale(0%) !important;
+          filter: grayscale(0%) !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.staff-members .abcfslMLRAuto,
+.staff-members .staff-position,
+.staff-member-detail .abcfslMLRAuto,
+.staff-member-detail .staff-position {
+  color: white !important;
+}
+
+.staff-members h3,
+.staff-member-detail h3 {
+  color: white !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+}
+
+.staff-members .staff-profile,
+.staff-member-detail .staff-profile {
+  color: white !important;
+  padding-left: 0px !important;
+}
+
+.staff-members a,
+.staff-member-detail a {
+  color: #ffedc7;
+}
+
+.staff-list-profile-text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.staff-list-profile-text h3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  z-index: 10;
+}
+
+.staff-list-profile-text .staff-position {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.staff-list-profile-text .staff-department {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.staff-list-profile-text .staff-email {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.staff-list-profile-text .abcfslMT15 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  z-index: 100;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+      justify-content: stretch;
+}
+
+.staff-list-profile-text .abcfslMT15 a {
+  color: #ffffff00;
 }
 
 /* 
@@ -1811,13 +1916,6 @@ _______________________________________________________ */
   margin-bottom: 1em;
 }
 
-@media (max-width: 979px) {
-  .et_pb_post h2,
-  .et_pb_post .post-meta {
-    padding-left: 0px !important;
-  }
-}
-
 .blog-sidebar h2 {
   font-size: 18px;
   font-weight: 400;
@@ -1825,8 +1923,30 @@ _______________________________________________________ */
   padding-bottom: 0px;
 }
 
+.single-post #main-content article {
+  margin-left: -60px !important;
+}
+
 .single-post #main-content article img {
-  max-width: 500% !important;
+  max-width: 200% !important;
+}
+
+@media (max-width: 980px) {
+  .single-post #main-content article img {
+    width: 100% !important;
+  }
+}
+
+.single-post .saboxplugin-wrap {
+  padding-left: 60px;
+}
+
+.single-post .saboxplugin-wrap p {
+  text-align: left;
+}
+
+.single-post .saboxplugin-wrap .sab-edit-settings {
+  display: none;
 }
 
 .single-post #sidebar {
