@@ -403,9 +403,9 @@ _______________________________________________________ */
   background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/GettyImages-543226407-400x284.jpg);
   background-position: top;
   background-size: contain;
-  height: 69vh !important;
+  height: 100vw !important;
   .header-content {
-    margin: 60vw auto 20px auto !important;
+    margin: 70vw auto 20px auto !important;
     .et_pb_fullwidth_header_subhead {
       font-size: 20px !important;
       color: $brick-dark !important;
@@ -417,7 +417,7 @@ _______________________________________________________ */
   // tablet
   .header-content {
     @media (min-width: 760px) {
-      margin: 66vw auto 20px auto !important;
+      margin: 70vw auto 20px auto !important;
     }
   }
   @media (min-width: 1100px) {
@@ -842,20 +842,25 @@ _______________________________________________________ */
   }
   .abcfslMLRAuto,
   .staff-position {
-    color: white !important;
+    color: $sand-dark !important;
   }
 
   h3 {
-    color: white !important;
+    color: $green-dark !important;
     font-weight: 700 !important;
     letter-spacing: 2px;
   }
   .staff-profile {
-    color: white !important;
     padding-left: 0px !important;
   }
   a {
-    color: #ffedc7;
+    color: $blue-dark;
+  }
+}
+.staff-member-detail {
+  p {
+    padding-left: 0px !important;
+    color: $grey-dark !important;
   }
 }
 // Set More link to cover Name and position:
