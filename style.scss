@@ -5,7 +5,8 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.1.5
+ Version:        1.1.7
+
 */
 
 /* =Theme customization starts here
@@ -403,9 +404,10 @@ _______________________________________________________ */
   background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/GettyImages-543226407-400x284.jpg);
   background-position: top;
   background-size: contain;
-  height: 100vw !important;
+  width: 100vw !important;
+  height: 71vw !important;
   .header-content {
-    margin: 70vw auto 20px auto !important;
+    margin: 00vw auto 20px auto !important;
     .et_pb_fullwidth_header_subhead {
       font-size: 20px !important;
       color: $brick-dark !important;
@@ -414,6 +416,28 @@ _______________________________________________________ */
       margin-bottom: 1em;
     }
   }
+  // mobile only
+  @media (max-width: 759px) {
+    padding-top: 6.1em !important;
+    .header-content {
+      display: grid;
+      h2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        max-height: 18vw;
+      }
+      .et_pb_header_content_wrapper {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: 28vw;
+      }
+      .et_pb_fullwidth_header_subhead {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+    }
+  }
+
   // tablet
   .header-content {
     @media (min-width: 760px) {
@@ -436,9 +460,9 @@ _______________________________________________________ */
 }
 .et_pb_slide_description {
   text-shadow: none !important;
-  padding: 6% 8% !important;
+  padding: 10% 17% !important;
   p {
-    font-size: 150% !important;
+    font-size: 110% !important;
     line-height: 1.5 !important;
   }
 }
