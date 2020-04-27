@@ -213,6 +213,16 @@ table {
     }
   }
 }
+/* Covid-19 Header
+_______________________________________________________ */
+
+#et-secondary-menu {
+  float: none !important;
+  text-align: center !important;
+  font-weight: 400;
+  //font-size and background color are set in Theme Customizer
+}
+
 /* Main Header
 _______________________________________________________ */
 #et-top-navigation {
@@ -1474,6 +1484,14 @@ _______________________________________________________ */
       display: none;
     }
   }
+  .saboxplugin-wrap .saboxplugin-gravatar img {
+    width: 200px !important;
+    max-width: 200px !important;
+    height: auto;
+    border-radius: 0;
+}
+
+
   #sidebar {
     padding-left: 10px !important;
     h4 {

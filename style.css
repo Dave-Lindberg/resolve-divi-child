@@ -265,6 +265,14 @@ table .bold td {
   color: #4c7cd9;
 }
 
+/* Covid-19 Header
+_______________________________________________________ */
+#et-secondary-menu {
+  float: none !important;
+  text-align: center !important;
+  font-weight: 400;
+}
+
 /* Main Header
 _______________________________________________________ */
 #et-top-navigation {
@@ -1989,6 +1997,13 @@ _______________________________________________________ */
 
 .single-post .saboxplugin-wrap .sab-edit-settings {
   display: none;
+}
+
+.single-post .saboxplugin-wrap .saboxplugin-gravatar img {
+  width: 200px !important;
+  max-width: 200px !important;
+  height: auto;
+  border-radius: 0;
 }
 
 .single-post #sidebar {
