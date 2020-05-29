@@ -6,7 +6,7 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.1.7
+ Version:        1.1.9
 
 */
 /* =Theme customization starts here
@@ -221,7 +221,7 @@ p {
 }
 
 table {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: #fffcf5;
   font-weight: 200;
   border: none !important;
@@ -547,6 +547,10 @@ _______________________________________________________ */
   .home-page-header {
     padding-top: 6.1em !important;
   }
+  .home-page-header .et_pb_fullwidth_header_container {
+    -ms-grid-rows: 67vw 20vw !important;
+        grid-template-rows: 67vw 20vw !important;
+  }
   .home-page-header .header-content {
     display: -ms-grid;
     display: grid;
@@ -580,8 +584,12 @@ _______________________________________________________ */
 }
 
 @media (min-width: 760px) {
-  .home-page-header .header-content {
-    margin: 70vw auto 20px auto !important;
+  .home-page-header {
+    margin-bottom: 10vw;
+  }
+  .home-page-header .et_pb_fullwidth_header_container {
+    -ms-grid-rows: 68vw 20vw !important;
+        grid-template-rows: 68vw 20vw !important;
   }
 }
 
@@ -1715,13 +1723,13 @@ _______________________________________________________ */
 }
 
 .pagination .alignleft a:after {
-  content: 'More Posts »';
+  content: "More Posts »";
   text-align: left;
   left: 0;
 }
 
 .pagination .alignright a:after {
-  content: '« Previous Results';
+  content: "« Previous Results";
   text-align: right;
   right: 0;
 }

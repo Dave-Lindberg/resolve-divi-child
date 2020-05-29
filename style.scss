@@ -5,13 +5,13 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.1.7
+ Version:        1.1.9
 
 */
 
 /* =Theme customization starts here
 ------------------------------------------------------- */
-@import 'color-variables';
+@import "color-variables";
 
 $base-font-size: 18px;
 
@@ -179,7 +179,7 @@ p {
   color: $grey-dark !important;
 }
 table {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: $off-white;
   font-weight: 200;
   border: none !important;
@@ -429,6 +429,9 @@ _______________________________________________________ */
   // mobile only
   @media (max-width: 759px) {
     padding-top: 6.1em !important;
+    .et_pb_fullwidth_header_container {
+      grid-template-rows: 67vw 20vw !important;
+    }
     .header-content {
       display: grid;
       h2 {
@@ -449,9 +452,10 @@ _______________________________________________________ */
   }
 
   // tablet
-  .header-content {
-    @media (min-width: 760px) {
-      margin: 70vw auto 20px auto !important;
+  @media (min-width: 760px) {
+    margin-bottom: 10vw;
+    .et_pb_fullwidth_header_container {
+      grid-template-rows: 68vw 20vw !important;
     }
   }
   @media (min-width: 1100px) {
@@ -1251,12 +1255,12 @@ _______________________________________________________ */
   }
 }
 .pagination .alignleft a:after {
-  content: 'More Posts »';
+  content: "More Posts »";
   text-align: left;
   left: 0;
 }
 .pagination .alignright a:after {
-  content: '« Previous Results';
+  content: "« Previous Results";
   text-align: right;
   right: 0;
 }
@@ -1489,8 +1493,7 @@ _______________________________________________________ */
     max-width: 200px !important;
     height: auto;
     border-radius: 0;
-}
-
+  }
 
   #sidebar {
     padding-left: 10px !important;
