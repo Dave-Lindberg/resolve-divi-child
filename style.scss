@@ -5,7 +5,7 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.1.9
+ Version:        1.2.0
 
 */
 
@@ -242,11 +242,11 @@ _______________________________________________________ */
 }
 
 #main-page-header {
-  height: 66vh;
+  height: 56vw;
   .et_pb_fullwidth_header_container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto !important;
     width: 100%;
     max-width: 100%;
 
@@ -272,7 +272,8 @@ _______________________________________________________ */
       h2 {
         padding-left: 0px !important;
         font-weight: 700;
-        color: $blue-dark !important;
+        color: white !important;
+        // text-shadow: 0 0 10px white;
         @media (min-width: 1100px) {
           font-weight: 700;
           color: white !important;
@@ -281,10 +282,7 @@ _______________________________________________________ */
     }
   }
   .et_pb_fullwidth_header_overlay {
-    display: none;
-    @media (min-width: 1100px) {
-      display: block;
-    }
+    display: block !important;
   }
   .et_pb_fullwidth_header .header-image {
     margin: 0px auto;
@@ -298,7 +296,7 @@ _______________________________________________________ */
     padding-left: 0;
     @media (max-width: 1099px) {
       padding-top: 0%;
-      font-size: 27px;
+      font-size: 7vw;
     }
     @media (min-width: 1100px) {
       padding-top: 3%;
@@ -420,7 +418,7 @@ _______________________________________________________ */
     margin: 00vw auto 20px auto !important;
     .et_pb_fullwidth_header_subhead {
       font-size: 20px !important;
-      color: $brick-dark !important;
+      color: $background !important;
     }
     .et_pb_button {
       margin-bottom: 1em;
@@ -428,12 +426,13 @@ _______________________________________________________ */
   }
   // mobile only
   @media (max-width: 759px) {
-    padding-top: 6.1em !important;
+    padding-top: 20vw !important;
     .et_pb_fullwidth_header_container {
       grid-template-rows: 67vw 20vw !important;
     }
     .header-content {
       display: grid;
+      grid-template-rows: 0.5fr 0.5fr 1fr;
       h2 {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -447,27 +446,35 @@ _______________________________________________________ */
       .et_pb_fullwidth_header_subhead {
         grid-column: 1/2;
         grid-row: 3/4;
+        color: $sand-dark !important;
       }
     }
   }
 
   // tablet
   @media (min-width: 760px) {
-    margin-bottom: 10vw;
+    // margin-bottom: 10vw;
+    .header-content {
+      margin: 15vw auto 0 !important;
+    }
     .et_pb_fullwidth_header_container {
       grid-template-rows: 68vw 20vw !important;
     }
   }
+
+  // desktop only
   @media (min-width: 1100px) {
     background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/GettyImages-543226407.jpg);
     background-position: center;
     background-size: cover;
-    height: 66vh !important;
+    height: 56vw !important;
     .header-content {
-      margin: 20px auto !important;
+      h2,
+      .et_pb_fullwidth_header_subhead {
+        text-shadow: none !important;
+      }
       .et_pb_fullwidth_header_subhead {
         font-size: 27px !important;
-        color: $background !important;
       }
     }
   }
@@ -656,9 +663,8 @@ _______________________________________________________ */
   }
   background-position: top;
   background-size: cover;
-  height: 36vh !important;
   .header-content {
-    margin: 54vw auto 20px auto !important;
+    margin: 0vw auto 20px auto !important;
     .et_pb_fullwidth_header_subhead {
       font-size: 20px !important;
       color: $brick-dark !important;
@@ -666,21 +672,22 @@ _______________________________________________________ */
   }
   // tablet
   @media (min-width: 760px) {
-    margin-bottom: 6em !important;
+    // margin-bottom: 6em !important;
     .header-content {
-      margin: 44vw auto 20px auto !important;
+      margin: 10vw auto 20px auto !important;
     }
   }
-
+  // desktop
   @media (min-width: 1100px) {
     background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/adults-blur-couple-1516036.jpg);
     background-position: center;
     background-size: cover;
-    height: 66vh !important;
     margin-bottom: 0em !important;
     .header-content {
-      margin: 20px auto !important;
       text-shadow: 0em 0em 1em rgba(10, 10, 10, 0.9);
+      h1 {
+        text-shadow: none !important;
+      }
       .et_pb_fullwidth_header_subhead {
         font-size: 27px !important;
         color: $background !important;
@@ -835,10 +842,10 @@ _______________________________________________________ */
 .about-page-header {
   background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/challenge-connected-connecting-1268480-400x284.jpg);
   background-position: top;
-  background-size: contain;
-  height: 46vh !important;
+  background-size: cover;
+  height: 56vw !important;
   .header-content {
-    margin: 54vw auto 20px auto !important;
+    margin: 0vw auto 20px auto !important;
     .et_pb_fullwidth_header_subhead {
       font-size: 20px !important;
       color: $brick-dark !important;
@@ -848,17 +855,20 @@ _______________________________________________________ */
   @media (min-width: 760px) {
     margin-bottom: 6em !important;
     .header-content {
-      margin: 57vw auto 20px auto !important;
+      margin: 5vw auto 20px auto !important;
     }
   }
+  // desktop
   @media (min-width: 1100px) {
     background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/challenge-connected-connecting-1268480.jpg);
     background-position: center;
     background-size: cover;
-    height: 66vh !important;
     margin-bottom: 0em !important;
     .header-content {
-      margin: 20px auto !important;
+      margin: 20vw auto 20px auto !important;
+      h1 {
+        text-shadow: none !important;
+      }
       .et_pb_fullwidth_header_subhead {
         font-size: 27px !important;
         color: $background !important;

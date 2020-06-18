@@ -6,7 +6,7 @@
  Author:         Dave Lindberg
  Author URI:     https://DaveLindberg.com
  Template:       Divi
- Version:        1.1.9
+ Version:        1.2.0
 
 */
 /* =Theme customization starts here
@@ -300,7 +300,7 @@ _______________________________________________________ */
 }
 
 #main-page-header {
-  height: 66vh;
+  height: 56vw;
 }
 
 #main-page-header .et_pb_fullwidth_header_container {
@@ -308,8 +308,8 @@ _______________________________________________________ */
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
+  -ms-grid-rows: auto auto !important;
+      grid-template-rows: auto auto !important;
   width: 100%;
   max-width: 100%;
 }
@@ -352,7 +352,7 @@ _______________________________________________________ */
 #main-page-header .et_pb_fullwidth_header_container .header-content-container h2 {
   padding-left: 0px !important;
   font-weight: 700;
-  color: #3a60a6 !important;
+  color: white !important;
 }
 
 @media (min-width: 1100px) {
@@ -364,13 +364,7 @@ _______________________________________________________ */
 }
 
 #main-page-header .et_pb_fullwidth_header_overlay {
-  display: none;
-}
-
-@media (min-width: 1100px) {
-  #main-page-header .et_pb_fullwidth_header_overlay {
-    display: block;
-  }
+  display: block !important;
 }
 
 #main-page-header .et_pb_fullwidth_header .header-image {
@@ -391,7 +385,7 @@ _______________________________________________________ */
   #main-page-header h1,
   #main-page-header h2 {
     padding-top: 0%;
-    font-size: 27px;
+    font-size: 7vw;
   }
 }
 
@@ -536,7 +530,7 @@ _______________________________________________________ */
 
 .home-page-header .header-content .et_pb_fullwidth_header_subhead {
   font-size: 20px !important;
-  color: #b35236 !important;
+  color: #ffedc7 !important;
 }
 
 .home-page-header .header-content .et_pb_button {
@@ -545,7 +539,7 @@ _______________________________________________________ */
 
 @media (max-width: 759px) {
   .home-page-header {
-    padding-top: 6.1em !important;
+    padding-top: 20vw !important;
   }
   .home-page-header .et_pb_fullwidth_header_container {
     -ms-grid-rows: 67vw 20vw !important;
@@ -554,6 +548,8 @@ _______________________________________________________ */
   .home-page-header .header-content {
     display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 0.5fr 0.5fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr;
   }
   .home-page-header .header-content h2 {
     -ms-grid-column: 1;
@@ -580,12 +576,13 @@ _______________________________________________________ */
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
+    color: #b3a459 !important;
   }
 }
 
 @media (min-width: 760px) {
-  .home-page-header {
-    margin-bottom: 10vw;
+  .home-page-header .header-content {
+    margin: 15vw auto 0 !important;
   }
   .home-page-header .et_pb_fullwidth_header_container {
     -ms-grid-rows: 68vw 20vw !important;
@@ -598,14 +595,14 @@ _______________________________________________________ */
     background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/GettyImages-543226407.jpg);
     background-position: center;
     background-size: cover;
-    height: 66vh !important;
+    height: 56vw !important;
   }
-  .home-page-header .header-content {
-    margin: 20px auto !important;
+  .home-page-header .header-content h2,
+  .home-page-header .header-content .et_pb_fullwidth_header_subhead {
+    text-shadow: none !important;
   }
   .home-page-header .header-content .et_pb_fullwidth_header_subhead {
     font-size: 27px !important;
-    color: #ffedc7 !important;
   }
 }
 
@@ -933,7 +930,6 @@ _______________________________________________________ */
   background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/adults-blur-couple-1516036-400x284.jpg);
   background-position: top;
   background-size: cover;
-  height: 36vh !important;
 }
 
 .what-we-do-header span {
@@ -942,7 +938,7 @@ _______________________________________________________ */
 }
 
 .what-we-do-header .header-content {
-  margin: 54vw auto 20px auto !important;
+  margin: 0vw auto 20px auto !important;
 }
 
 .what-we-do-header .header-content .et_pb_fullwidth_header_subhead {
@@ -951,11 +947,8 @@ _______________________________________________________ */
 }
 
 @media (min-width: 760px) {
-  .what-we-do-header {
-    margin-bottom: 6em !important;
-  }
   .what-we-do-header .header-content {
-    margin: 44vw auto 20px auto !important;
+    margin: 10vw auto 20px auto !important;
   }
 }
 
@@ -964,12 +957,13 @@ _______________________________________________________ */
     background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/adults-blur-couple-1516036.jpg);
     background-position: center;
     background-size: cover;
-    height: 66vh !important;
     margin-bottom: 0em !important;
   }
   .what-we-do-header .header-content {
-    margin: 20px auto !important;
     text-shadow: 0em 0em 1em rgba(10, 10, 10, 0.9);
+  }
+  .what-we-do-header .header-content h1 {
+    text-shadow: none !important;
   }
   .what-we-do-header .header-content .et_pb_fullwidth_header_subhead {
     font-size: 27px !important;
@@ -1169,12 +1163,12 @@ _______________________________________________________ */
 .about-page-header {
   background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/challenge-connected-connecting-1268480-400x284.jpg);
   background-position: top;
-  background-size: contain;
-  height: 46vh !important;
+  background-size: cover;
+  height: 56vw !important;
 }
 
 .about-page-header .header-content {
-  margin: 54vw auto 20px auto !important;
+  margin: 0vw auto 20px auto !important;
 }
 
 .about-page-header .header-content .et_pb_fullwidth_header_subhead {
@@ -1187,7 +1181,7 @@ _______________________________________________________ */
     margin-bottom: 6em !important;
   }
   .about-page-header .header-content {
-    margin: 57vw auto 20px auto !important;
+    margin: 5vw auto 20px auto !important;
   }
 }
 
@@ -1196,11 +1190,13 @@ _______________________________________________________ */
     background-image: url(https://resolvemedicalbills.com/wp-content/uploads/2019/08/challenge-connected-connecting-1268480.jpg);
     background-position: center;
     background-size: cover;
-    height: 66vh !important;
     margin-bottom: 0em !important;
   }
   .about-page-header .header-content {
-    margin: 20px auto !important;
+    margin: 20vw auto 20px auto !important;
+  }
+  .about-page-header .header-content h1 {
+    text-shadow: none !important;
   }
   .about-page-header .header-content .et_pb_fullwidth_header_subhead {
     font-size: 27px !important;
